@@ -3,12 +3,27 @@ Using Hector SLAM without odometry data on a ROS system with the RPLidar A1.
 
 1. Install ROS full desktop version (tested on Kinetic) from: http://wiki.ros.org/kinetic/Installation/Ubuntu
 2. Create a catkin workspace: http://wiki.ros.org/ROS/Tutorials/CreatingPackage
-3. Clone this repository into your catkin workspace
-4. In your catkin workspace run `source /devel/setup.bash`
-5. Run `chmod 666 /dev/ttyUSB0` or the serial path to your lidar
-6. Run `roslaunch rplidar_ros rplidar.launch`
-7. Run `roslaunch hector_slam_launch tutorial.launch`
-8. RVIZ should open up with SLAM data
+3. Create catkin workspace (working link): https://www.instructables.com/Getting-Started-With-the-Low-cost-RPLIDAR-Using-Je/
+4. Clone this repository into your catkin workspace
+5. In your catkin workspace run `source /devel/setup.bash`
+6. Run `chmod 666 /dev/ttyUSB0` or the serial path to your lidar
+7. Run `roslaunch rplidar_ros rplidar.launch`
+8. Run `roslaunch hector_slam_launch tutorial.launch`
+9. RVIZ should open up with SLAM data
+
+# Working links
+https://collabnix.com/getting-started-with-the-low-cost-rplidar-using-jetson/
+
+## Issues
+
+[Fix] rosdep: command not found issue
+https://github.com/jugfk/installROS/issues/2
+
+CMAKE_PREFIX_PATH doesn't help CMake in finding Qt5
+https://stackoverflow.com/questions/47647035/cmake-prefix-path-doesnt-help-cmake-in-finding-qt5
+
+Project 'cv_bridge' can not find opencv
+https://github.com/ros-perception/vision_opencv/issues/345#issuecomment-663416626
 
 # Sources
 [RPLidar](https://github.com/robopeak/rplidar_ros)<br />
